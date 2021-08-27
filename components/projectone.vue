@@ -129,7 +129,7 @@
         <div class="project-container">
           <client-only>
             <carousel v-bind="options">
-              <slide v-for="i in 3" :key="i" class="img-wrapper">
+              <slide v-for="i in 2" :key="i" class="img-wrapper">
                 <div class="project-slider-wrap">
                   <div class="slider-profile">
                     <img src="~/assets/img/input.png" alt="" />

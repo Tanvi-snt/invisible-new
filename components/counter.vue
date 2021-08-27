@@ -27,7 +27,7 @@
       <div class="container">
         <client-only>
           <carousel v-bind="options">
-            <slide v-for="i in 3" :key="i">
+            <slide v-for="i in 2" :key="i">
               <div class="slide_wrapper">
                 <div class="slide_content">
                   <div>

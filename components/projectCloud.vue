@@ -134,27 +134,38 @@
     </section>
     <section class="project-slider-section">
       <div class="container">
-        <div class="project-slider-wrap project-container">
-          <!-- <img src="~/assets/img/next-arrow.png" alt="" /> -->
-          <div class="slider-profile">
-            <img src="~/assets/img/input.png" alt="" />
-          </div>
-          <div class="slider-info">
-            <div class="ratings">
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-            </div>
-            <h2>
-              Professionals in their craft! All products were super great with
-              strong attention to details, and overall vibe
-            </h2>
+        <div class="project-container">
+          <client-only>
+            <carousel v-bind="options">
+              <slide v-for="i in 2" :key="i">
+                <div class="project-slider-wrap ">
+                  <div class="slider-profile">
+                  <img src="~/assets/img/input.png" alt="" />
+                </div>
+                 <div class="slider-info">
+                  <div class="ratings">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                  <h2>
+                    Professionals in their craft! All products were super great
+                    with strong attention to details, and overall vibe
+                  </h2>
 
-            <h4>Bakhtiyar Sattarov</h4>
-            <p>UX/UI Designer</p>
-          </div>
+                  <h4>Bakhtiyar Sattarov</h4>
+                  <p>UX/UI Designer</p>
+                </div>
+                </div>
+                
+
+              </slide>
+            </carousel>
+          </client-only>
+          <!-- <img src="~/assets/img/next-arrow.png" alt="" /> -->
+
           <!-- <img src="~/assets/img/previous-arrow.png" alt=""> -->
         </div>
       </div>
@@ -202,11 +213,7 @@
       </div>
     </section>
     
-    <section>
-      <div class="container">
-        
-      </div>
-    </section>
+  
   </div>
 </template>
 
@@ -215,6 +222,16 @@
 
 export default {
   name: "ProjectCloud",
+    data() {
+    return {
+      options: {
+        loop: true,
+        perPage: 1,
+        paginationEnabled: false,
+        autoplay: true,
+      },
+    };
+  }
 };
 </script>
  
