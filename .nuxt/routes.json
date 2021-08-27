@@ -1,0 +1,51 @@
+[
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/root/Desktop/invisible-new/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_1aac3357"
+  },
+  {
+    "name": "price",
+    "path": "/price",
+    "component": "/root/Desktop/invisible-new/pages/price.vue",
+    "chunkName": "pages/price",
+    "_name": "_662ec080"
+  },
+  {
+    "name": "project",
+    "path": "/project",
+    "component": "/root/Desktop/invisible-new/pages/project.vue",
+    "chunkName": "pages/project",
+    "_name": "_3f919460"
+  },
+  {
+    "name": "project1",
+    "path": "/project1",
+    "component": "/root/Desktop/invisible-new/pages/project1.vue",
+    "chunkName": "pages/project1",
+    "_name": "_26b91611"
+  },
+  {
+    "name": "project2",
+    "path": "/project2",
+    "component": "/root/Desktop/invisible-new/pages/project2.vue",
+    "chunkName": "pages/project2",
+    "_name": "_26c72d92"
+  },
+  {
+    "name": "project3",
+    "path": "/project3",
+    "component": "/root/Desktop/invisible-new/pages/project3.vue",
+    "chunkName": "pages/project3",
+    "_name": "_26d54513"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/root/Desktop/invisible-new/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1b7b2ac9"
+  }
+]

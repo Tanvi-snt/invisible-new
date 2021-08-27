@@ -24,36 +24,38 @@
     </div>
   </section> 
   <section class="slide-share_section">
-    <div class="container">
-       <div class="slide_wrapper">
+      <div class="container">
+        <client-only>
+          <carousel v-bind="options">
+            <slide v-for="i in 3" :key="i">
+              <div class="slide_wrapper">
+                <div class="slide_content">
+                  <div>
+                    <h1>Gaurav Gupta</h1>
+                    <p>SlideShare</p>
+                  </div>
 
-         <div class="slide_content">
-           <div>
-             <h1>Gaurav Gupta</h1>
-             <p>SlideShare</p>
-           </div>
+                  <h2>
+                    A friendly chilled out guy who is an easy fit to any early
+                    stage startup. He designs and codes like a pro! In short, he
+                    knows his stuff.
+                  </h2>
 
-           <h2>A friendly chilled out guy who is an easy fit to any early stage startup. He designs and codes like a pro! In short, he knows his stuff. </h2>
-
-           <div class="slider_controls">
-                 <img src="~/assets/img/next.png" alt="">
-              <img src="~/assets/img/prev.png" alt="">
-           </div>
-
-               
-
-         </div>
-
-         <div class="slider_img">
-               <img src="~/assets/img/slide2.png" alt="" class="slide">
-              <img src="~/assets/img/slider1.png" alt="">
-
-         </div>
-
-       </div>
-    </div>
-
-  </section>
+                  <div class="slider_controls">
+                    <img src="~/assets/img/next.png" alt="" />
+                    <img src="~/assets/img/prev.png" alt="" />
+                  </div>
+                </div>
+                <div class="slider_img">
+                  <img src="~/assets/img/slide2.png" alt="" class="slide" />
+                  <img src="~/assets/img/slider1.png" alt="" />
+                </div>
+              </div>
+            </slide>
+          </carousel>
+        </client-only>
+      </div>
+    </section>
 </div>
  
 
@@ -61,7 +63,17 @@
 
 <script>
 export default {
-  name: "Counter"
+  name: "Counter",
+  data() {
+    return {
+      options: {
+        loop: true,
+        perPage: 1,
+        paginationEnabled: false,
+        autoplay: true,
+      },
+    };
+  },
 }
 </script>
 

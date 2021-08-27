@@ -126,29 +126,37 @@
 
     <section class="project-slider-section">
       <div class="container">
-        <div class="project-slider-wrap project-container">
+        <div class="project-container">
+          <client-only>
+            <carousel v-bind="options">
+              <slide v-for="i in 3" :key="i" class="img-wrapper">
+                <div class="project-slider-wrap">
+                  <div class="slider-profile">
+                    <img src="~/assets/img/input.png" alt="" />
+                  </div>
+                  <div class="slider-info">
+                    <div class="ratings">
+                      <div class="star"></div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                    </div>
+                    <h2>
+                      Professionals in their craft! All products were super
+                      great with strong attention to details, and overall vibe
+                    </h2>
+
+                    <h4>Bakhtiyar Sattarov</h4>
+                    <p>UX/UI Designer</p>
+                  </div>
+                </div>
+              </slide>
+            </carousel>
+          </client-only>
           <!-- <img src="~/assets/img/next-arrow.png" alt="" /> -->
-          <div class="slider-profile">
-            <img src="~/assets/img/input.png" alt="" />
-          </div>
-          <div class="slider-info">
-            <div class="ratings">
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-            </div>
-            <h2>
-              Professionals in their craft! All products were super great with
-              strong attention to details, and overall vibe
-            </h2>
 
-            <h4>Bakhtiyar Sattarov</h4>
-            <p>UX/UI Designer</p>
-          </div>
-           <!-- <img src="~/assets/img/previous-arrow.png" alt=""> -->
-
+          <!-- <img src="~/assets/img/previous-arrow.png" alt=""> -->
         </div>
       </div>
     </section>
@@ -203,7 +211,7 @@
             </p>
             <button>Get Started</button>
             <div>
-              <img src="~/assets/img/social.png" alt="" class="mobile-social"/>
+              <img src="~/assets/img/social.png" alt="" class="mobile-social" />
             </div>
           </div>
           <img src="~/assets/img/mobile.png" alt="" class="invite-mobile" />
@@ -303,6 +311,16 @@
 <script>
 export default {
   name: "ProjectOne",
+  data() {
+    return {
+      options: {
+        loop: true,
+        perPage: 1,
+        paginationEnabled: false,
+        autoplay: true,
+      },
+    };
+  },
 };
 </script>
 
@@ -858,153 +876,143 @@ img.project_user_1 {
   transform: rotate(35deg);
 }
 
-
-@media (min-width: 320px) and (max-width: 375px)  {
-
-.slider-profile{
+@media (min-width: 320px) and (max-width: 375px) {
+  .slider-profile {
     width: 100% !important;
     height: 285px !important;
- 
-}
+  }
 
-.project-retain-wrapper h1, .slider-info h2, .income-wrapper h1, .income-wrap-text h3, .invite-wrap h2, .project-team-header h1 {
-      font-size: 28px !important;
-    line-height: 36px !important; 
-}
+  .project-retain-wrapper h1,
+  .slider-info h2,
+  .income-wrapper h1,
+  .income-wrap-text h3,
+  .invite-wrap h2,
+  .project-team-header h1 {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
 
-.invite-wrap h2{
+  .invite-wrap h2 {
     max-width: 196px !important;
     padding-top: 24px !important;
+  }
 
-}
-
-.sale-header h1 {
+  .sale-header h1 {
     font-size: 24px !important;
     line-height: 32px !important;
-}
+  }
 
-.sale-header p {
+  .sale-header p {
     font-size: 14px !important;
     line-height: 22px !important;
     max-width: 149px !important;
-}
+  }
 
-.star {
+  .star {
     font-size: 12px !important;
-}
+  }
 
-.project-wrapper h1 {
+  .project-wrapper h1 {
     font-size: 30px !important;
     line-height: 36px !important;
+  }
 
-}
-
-
-.tab-slot p {
+  .tab-slot p {
     font-size: 16px;
     line-height: 24px;
+  }
 
-}
-
-
-.project-sale-wrapper .sale-wrap{
+  .project-sale-wrapper .sale-wrap {
     height: 268px;
-}
+  }
 
-
-
-.project-management-wrap .project-screen {
+  .project-management-wrap .project-screen {
     height: 275px !important;
-}
+  }
 
-
-
-.project-income-section {
+  .project-income-section {
     padding: 42px 16px !important;
-}
+  }
 }
 
-
-@media(min-width:535px) and (max-width:767px) {
-    .sale-header p {
+@media (min-width: 535px) and (max-width: 767px) {
+  .sale-header p {
     max-width: 250px !important;
+  }
 }
-}
-
 
 @media (max-width: 767px) {
-  img.project_user_1, img.project_user {
+  img.project_user_1,
+  img.project_user {
     display: none;
   }
 
-  .project-retain-wrap, .project-retain-card, .tab-inner-content, .project-slider-wrap, .income-wrapper .income, .invite-wrapper, .project-management-wrap {
-      flex-direction: column;
+  .project-retain-wrap,
+  .project-retain-card,
+  .tab-inner-content,
+  .project-slider-wrap,
+  .income-wrapper .income,
+  .invite-wrapper,
+  .project-management-wrap {
+    flex-direction: column;
   }
 
-
-.project-management-wrap .project-screen, .project-retain-wrap .video {
+  .project-management-wrap .project-screen,
+  .project-retain-wrap .video {
     width: 100%;
- 
-}
+  }
 
-.income-wrap {
+  .income-wrap {
     flex-direction: column-reverse;
-}
+  }
 
-
-.invite-wrap h2 {
+  .invite-wrap h2 {
     font-size: 32px;
     line-height: 42px;
     max-width: 235px;
     padding-top: 48px;
     text-align: center;
-    margin:auto;
-}
-
-
-.invite-logo h1{
-
     margin: auto;
-}
+  }
 
+  .invite-logo h1 {
+    margin: auto;
+  }
 
-.invite-wrap p {
+  .invite-wrap p {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
     margin: auto;
-}
+  }
 
-
-.invite-wrap button{
+  .invite-wrap button {
     padding: 14px 20px;
     font-size: 18px;
     line-height: 24px;
     margin: auto;
     display: block;
-}
+  }
 
-
-.project-wrapper h1  {
+  .project-wrapper h1 {
     font-size: 38px;
     line-height: 48px;
     max-width: 300px;
     text-align: center;
     margin: auto;
-}
+  }
 
-
-.project-wrapper p {
+  .project-wrapper p {
     font-size: 16px;
     line-height: 24px;
     max-width: 330px;
     padding-bottom: 28px;
     margin: auto;
     text-align: center;
-}
+  }
 
-
-.project-wrapper button, .project-retain-wrapper button { 
+  .project-wrapper button,
+  .project-retain-wrapper button {
     width: 165px;
     font-size: 16px;
     line-height: 24px;
@@ -1012,998 +1020,863 @@ img.project_user_1 {
     display: block;
     margin: auto;
     margin-bottom: 70px;
-}
+  }
 
-.header-bullet {
-  justify-content: center;
-}
+  .header-bullet {
+    justify-content: center;
+  }
 
-
-.project-retain-wrapper h1 {
+  .project-retain-wrapper h1 {
     font-size: 32px;
     line-height: 42px;
     max-width: 320px;
     text-align: center;
     margin: auto;
-}
+  }
 
-.project-retain-wrapper p {
+  .project-retain-wrapper p {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
     margin: auto;
-}
+  }
 
-
-.project-retain-wrap .triangle {
+  .project-retain-wrap .triangle {
     width: 60px;
     height: 60px;
-      top: 42%;
+    top: 42%;
     left: 45%;
-}
+  }
 
-.income-wrap {
-  align-items: center;
-}
+  .income-wrap {
+    align-items: center;
+  }
 
-
-.project-retain-wrap .triangle .triangle-icon{
+  .project-retain-wrap .triangle .triangle-icon {
     top: 25px;
     left: 26px;
-}
+  }
 
-
-.retain-card h4 {
+  .retain-card h4 {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-}
+  }
 
-
-
-.project-retain-card {
-
+  .project-retain-card {
     padding-top: 36px;
     margin-top: 32px;
     align-items: center;
     row-gap: 20px;
-}
+  }
 
-.retain-card p {
+  .retain-card p {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-}
+  }
 
-
-.sale-header {
+  .sale-header {
     column-gap: 25px;
-}
+  }
 
-
-.sale-header h1 {
-
+  .sale-header h1 {
     font-size: 28px;
     line-height: 36px;
     max-width: 395px;
+  }
 
-}
-
-.project_section_2  {
+  .project_section_2 {
     padding: 60px 0;
-}
+  }
 
-
-
-.sale-header p {
+  .sale-header p {
     font-size: 16px;
     line-height: 24px;
     max-width: 190px;
-}
+  }
 
-
-.tab-slot-img img {
+  .tab-slot-img img {
     padding: 8px;
+  }
 
-}
-
-.slider-info {
+  .slider-info {
     padding-top: 30px;
-}
+  }
 
-
-.slider-profile {
+  .slider-profile {
     width: 350px;
     height: 350px;
     margin: auto;
-}
+  }
 
-
-.project-slider-section {
+  .project-slider-section {
     padding: 55px 0;
-}
+  }
 
-
-.tab-inner-content .tab-slot {
+  .tab-inner-content .tab-slot {
     justify-content: center;
-}
+  }
 
-
-.tab-inner-content{
+  .tab-inner-content {
     row-gap: 20px;
-}
+  }
 
-.tab-slot h1 {
+  .tab-slot h1 {
     font-size: 20px;
     line-height: 26px;
-}
+  }
 
-.project_section_3 {
+  .project_section_3 {
     padding: 72px 0;
-}
+  }
 
-
-.slider-info h2 {
+  .slider-info h2 {
     font-size: 30px;
     line-height: 42px;
     max-width: 380px;
     margin: auto;
     padding-top: 38px;
     text-align: center;
-}
+  }
 
-
-.star {
+  .star {
     font-size: 14px;
-}
+  }
 
-
-.slider-info h4 {
+  .slider-info h4 {
     font-size: 20px;
     line-height: 28px;
     padding-top: 46px;
-}
+  }
 
-
-.income-wrapper h1 {
+  .income-wrapper h1 {
     font-size: 32px;
     line-height: 42px;
     max-width: 310px;
-  
-}
+  }
 
-
-.income-wrap-text h3 {
+  .income-wrap-text h3 {
     font-size: 32px;
     line-height: 42px;
     max-width: 350px;
     text-align: center;
- 
-}
+  }
 
-.income-wrap-text {
-  text-align: center;
-}
+  .income-wrap-text {
+    text-align: center;
+  }
 
-
-
-.income-wrapper p{
+  .income-wrapper p {
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 62px;
-}
+  }
 
-
-.income-wrap-text p {
-       max-width: 358px;
+  .income-wrap-text p {
+    max-width: 358px;
     text-align: center;
-  
-}
+  }
 
-
-.project-income-section {
+  .project-income-section {
     padding: 60px 35px;
-}
+  }
 
-.invite-wrapper img.mobile-social {
-      margin: auto;
+  .invite-wrapper img.mobile-social {
+    margin: auto;
     display: block;
     padding-bottom: 45px;
     padding-top: 40px;
-}
+  }
 
-
-.project-team-header p {
+  .project-team-header p {
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 34px;
-}
+  }
 
-
-.project-team-wrap {
+  .project-team-wrap {
     flex-direction: column;
-        max-width: 350px;
+    max-width: 350px;
     margin: auto;
-}
+  }
 
-
-.project-team-more p {
+  .project-team-more p {
     font-size: 16px;
     line-height: 24px;
     max-width: 350px;
     padding-top: 14px;
     padding-bottom: 18px;
-}
+  }
 
-
-.project-team-wrap h2 {
+  .project-team-wrap h2 {
     font-size: 20px;
     line-height: 24px;
-}
+  }
 
-
-
-.project-management-wrap .project-screen {
+  .project-management-wrap .project-screen {
     height: 400px;
-}
+  }
 
-
-
-.project-management-wrap {
+  .project-management-wrap {
     padding-top: 50px;
-}
+  }
 
-
-.project-management-wrap .project-team-more h1 {
+  .project-management-wrap .project-team-more h1 {
     font-size: 20px;
     line-height: 26px;
     text-align: center;
-}
+  }
 
-
-.project-section {
+  .project-section {
     padding-top: 42px;
-}
+  }
 
-.slider-info {
-display: flex;
+  .slider-info {
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-
-.project-screen-wrap .project-team-more p {
+  .project-screen-wrap .project-team-more p {
     padding-bottom: 22px;
     text-align: center;
     margin: auto;
-}
+  }
 
-.project-screen-wrap {
-
+  .project-screen-wrap {
     padding-top: 25px;
-}
+  }
 
-.project-team-wrapper  {
+  .project-team-wrapper {
     padding-bottom: 46px;
-}
+  }
 
-.project-team-header h1 {
+  .project-team-header h1 {
     font-size: 32px;
     line-height: 42px;
-}
+  }
 
-.invite-wrapper img.invite-mobile {
-  width: 60%;
+  .invite-wrapper img.invite-mobile {
+    width: 60%;
     margin: auto;
     display: block;
-}
+  }
 
-.income-wrap img {
-  width: 100%;
-}
-
+  .income-wrap img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-
-.project-wrapper h1 {
+  .project-wrapper h1 {
     font-size: 46px;
     line-height: 56px;
     max-width: 390px;
-}
+  }
 
-
-img.project_user {
+  img.project_user {
     top: -270px;
     right: -400px;
     width: 100%;
-}
+  }
 
-
-img.project_user_1{
-     bottom: -260px;
+  img.project_user_1 {
+    bottom: -260px;
     right: -400px;
     width: 100%;
-}
+  }
 
-
-.project-section {
+  .project-section {
     padding-top: 70px;
     padding-bottom: 35px;
-    
-}
+  }
 
-.project-retain-wrap .video {
-  width: 370px;
+  .project-retain-wrap .video {
+    width: 370px;
     height: 325px;
-}
+  }
 
-
-.project-retain-wrapper p {
+  .project-retain-wrapper p {
     padding-top: 12px;
     padding-bottom: 26px;
     max-width: 390px;
-}
+  }
 
-.project-retain-wrapper h1, .sale-header h1 {
-  font-size: 32px;
+  .project-retain-wrapper h1,
+  .sale-header h1 {
+    font-size: 32px;
     line-height: 42px;
     max-width: 310px;
-}
+  }
 
-.project-retain-wrapper button, .project-wrapper button {
+  .project-retain-wrapper button,
+  .project-wrapper button {
     width: 170px;
     padding: 14px 0;
     font-size: 18px;
     line-height: 24px;
-}
+  }
 
-
-.project_section_3, .project-slider-section, .project-income-section 
- {
+  .project_section_3,
+  .project-slider-section,
+  .project-income-section {
     padding: 80px 0;
-}
+  }
 
-.project-wrapper p{
-     font-size: 18px;
+  .project-wrapper p {
+    font-size: 18px;
     line-height: 28px;
     max-width: 365px;
     padding-top: 12px;
     padding-bottom: 28px;
-}
+  }
 
-
-.project-wrapper button {
+  .project-wrapper button {
     margin-bottom: 50px;
-}
+  }
 
-
-.project-retain-wrap .triangle .triangle-icon{
+  .project-retain-wrap .triangle .triangle-icon {
     top: 25px;
     left: 27px;
-}
+  }
 
-
-.project-retain-wrap .triangle {
+  .project-retain-wrap .triangle {
     width: 60px;
     height: 60px;
-        top: 125px;
+    top: 125px;
     left: 140px;
-}
+  }
 
-.tab-slot h1, .retain-card h4 {
-  font-size: 18px;
-      line-height: 26px;
+  .tab-slot h1,
+  .retain-card h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
 
-}
-
-
-.project-slider-wrap{
+  .project-slider-wrap {
     column-gap: 25px;
-}
+  }
 
-.tab-inner-content .tab-slot {
-
+  .tab-inner-content .tab-slot {
     column-gap: 10px;
-}
+  }
 
-
-.tab-inner-content{
-
+  .tab-inner-content {
     padding-top: 30px;
     column-gap: 12px;
-}
+  }
 
-.tab-slot-img img {
+  .tab-slot-img img {
     padding: 6px;
+  }
 
-}
-
-.project-retain-wrap {
+  .project-retain-wrap {
     column-gap: 20px;
-}
+  }
 
-
-.project-retain-card {
+  .project-retain-card {
     column-gap: 20px;
-}
+  }
 
-.income-wrap img {
-  width: 300px;
+  .income-wrap img {
+    width: 300px;
+  }
 
-}
-
-
-.retain-card p {
+  .retain-card p {
     max-width: 196px;
     line-height: 24px;
-}
+  }
 
-.slider-info h2 {
+  .slider-info h2 {
     font-size: 32px;
     line-height: 42px;
     max-width: 500px;
-      padding-top: 34px;;
-}
+    padding-top: 34px;
+  }
 
-
-.star {
+  .star {
     font-size: 12px;
-}
+  }
 
-.slider-info h4 {
+  .slider-info h4 {
     padding-top: 50px;
-        font-size: 20px;
+    font-size: 20px;
     line-height: 24px;
-}
+  }
 
-
-.income-wrapper h1 {
-font-size: 46px;
+  .income-wrapper h1 {
+    font-size: 46px;
     line-height: 56px;
     max-width: 550px;
-}
+  }
 
-
-.invite-wrapper {
-
+  .invite-wrapper {
     column-gap: 25px;
-}
+  }
 
-
-
-
-.income-wrap {
+  .income-wrap {
     column-gap: 42px;
-}
+  }
 
-.income-wrapper .income {
+  .income-wrapper .income {
     padding-bottom: 32px;
-}
+  }
 
+  .income-wrapper p {
+    padding-bottom: 42px;
+  }
 
-.income-wrapper p {
-     padding-bottom: 42px;
-}
-
-
-.income-wrap-text h3 {
+  .income-wrap-text h3 {
     font-size: 32px;
     line-height: 42px;
     max-width: 345px;
+  }
 
-}
-
-
-.sale-header p {
+  .sale-header p {
     line-height: 24px;
     max-width: 400px;
-}
+  }
 
-
-.invite-wrap h2 {
-   
+  .invite-wrap h2 {
     font-size: 46px;
     line-height: 56px;
     max-width: 350px;
     padding-top: 50px;
-}
+  }
 
-
-.project-team-more p {
+  .project-team-more p {
     max-width: 400px;
-}
+  }
 
-
-.project-team-wrap h2 {
+  .project-team-wrap h2 {
     font-size: 20px;
     line-height: 26px;
-}
+  }
 
-
-.invite-wrap button {
+  .invite-wrap button {
     padding: 14px 20px;
     font-size: 18px;
     line-height: 24px;
-        margin-bottom: 86px;
-}
+    margin-bottom: 86px;
+  }
 
-.invite-logo h1  {
+  .invite-logo h1 {
     width: 46px;
     height: 46px;
     font-size: 28px;
     padding: 4px 10px;
-}
+  }
 
-.project-invite-section {
+  .project-invite-section {
     padding: 60px 0;
-}
+  }
 
-
-.project-team-header h1 {
+  .project-team-header h1 {
     font-size: 48px;
     line-height: 56px;
-}
+  }
 
-
-.project-team-header p {
+  .project-team-header p {
     padding-bottom: 38px;
-}
+  }
 
-.project-team-wrap {
+  .project-team-wrap {
     padding: 32px 0px;
-}
+  }
 
-
-.project-team-wrapper {
+  .project-team-wrapper {
     padding-bottom: 32px;
-}
+  }
 
-
-.project-management-wrap .project-team-more h1 {
+  .project-management-wrap .project-team-more h1 {
     font-size: 20px;
     line-height: 26px;
-}
+  }
 
-img.invite-mobile {
-      width: 275px;
-}
+  img.invite-mobile {
+    width: 275px;
+  }
 
-
-.project-management-wrap {
+  .project-management-wrap {
     padding-top: 56px;
     column-gap: 25px;
-}
+  }
 
-
-.project-management-wrap .project-screen {
+  .project-management-wrap .project-screen {
     width: 500px;
     height: 500px;
-}
+  }
 
-
-.project-team-section {
+  .project-team-section {
     padding-bottom: 70px;
-}
+  }
 
-.project-screen-wrap .project-team-more p {
+  .project-screen-wrap .project-team-more p {
     padding-bottom: 16px;
+  }
 
-}
-
-
-.project-screen-wrap {
-  
+  .project-screen-wrap {
     row-gap: 20px;
-}
-
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1024px) {
-
-
-
-.project-wrapper h1 {
+  .project-wrapper h1 {
     font-size: 52px;
     line-height: 60px;
     max-width: 435px;
-}
+  }
 
-
-img.project_user {
+  img.project_user {
     top: -370px;
     right: -495px;
     width: 100%;
-}
+  }
 
-
-img.project_user_1{
+  img.project_user_1 {
     bottom: -415px;
     right: -400px;
     width: 100%;
-}
+  }
 
-
-.project-section {
+  .project-section {
     padding-top: 95px;
-    
-}
+  }
 
-.project-retain-wrap .video {
+  .project-retain-wrap .video {
     width: 435px;
     height: 350px;
-}
+  }
 
-
-.project-retain-wrapper p {
+  .project-retain-wrapper p {
     padding-top: 12px;
     padding-bottom: 26px;
-}
+  }
 
-.project-retain-wrapper h1, .sale-header h1 {
+  .project-retain-wrapper h1,
+  .sale-header h1 {
     font-size: 42px;
     line-height: 52px;
     max-width: 470px;
-}
+  }
 
-.project-retain-wrapper button, .project-wrapper button {
+  .project-retain-wrapper button,
+  .project-wrapper button {
     width: 170px;
     padding: 14px 0;
     font-size: 18px;
     line-height: 24px;
-}
+  }
 
-
-.project_section_3, .project-slider-section, .project-income-section 
- {
+  .project_section_3,
+  .project-slider-section,
+  .project-income-section {
     padding: 80px 0;
-}
+  }
 
-.project-wrapper p{
+  .project-wrapper p {
     font-size: 20px;
     line-height: 28px;
     max-width: 410px;
     padding-top: 12px;
     padding-bottom: 28px;
-}
+  }
 
-
-.project-wrapper button {
+  .project-wrapper button {
     margin-bottom: 96px;
-}
+  }
 
-
-.project-retain-wrap .triangle .triangle-icon{
+  .project-retain-wrap .triangle .triangle-icon {
     top: 25px;
     left: 27px;
-}
+  }
 
-
-.project-retain-wrap .triangle {
+  .project-retain-wrap .triangle {
     width: 60px;
     height: 60px;
     top: 140px;
     left: 196px;
-}
+  }
 
-.tab-slot h1, .retain-card h4 {
-  font-size: 20px;
-}
+  .tab-slot h1,
+  .retain-card h4 {
+    font-size: 20px;
+  }
 
-.slider-info h2 {
+  .slider-info h2 {
     font-size: 32px;
     line-height: 42px;
     max-width: 500px;
     padding-top: 45px;
-}
+  }
 
-
-.star {
+  .star {
     font-size: 14px;
-}
+  }
 
-.slider-info h4 {
+  .slider-info h4 {
     padding-top: 56px;
-}
+  }
 
-
-.income-wrapper h1 {
+  .income-wrapper h1 {
     font-size: 52px;
     line-height: 60px;
     max-width: 640px;
-}
+  }
 
-
-.income-wrapper p {
+  .income-wrapper p {
     padding-bottom: 54px;
-}
+  }
 
-
-.income-wrap-text h3 {
+  .income-wrap-text h3 {
     font-size: 32px;
     line-height: 42px;
     max-width: 345px;
+  }
 
-}
-
-
-.invite-wrap h2 {
+  .invite-wrap h2 {
     font-size: 52px;
     line-height: 60px;
     max-width: 425px;
     padding-top: 68px;
-}
+  }
 
-
-.invite-wrap button {
+  .invite-wrap button {
     padding: 14px 20px;
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 100px;
-}
+  }
 
-.invite-logo h1  {
+  .invite-logo h1 {
     width: 46px;
     height: 46px;
     font-size: 28px;
     padding: 4px 10px;
-}
+  }
 
-.project-invite-section {
+  .project-invite-section {
     padding: 60px 0;
-}
+  }
 
-
-.project-team-header h1 {
+  .project-team-header h1 {
     font-size: 48px;
     line-height: 56px;
-}
+  }
 
-
-.project-team-header p {
+  .project-team-header p {
     padding-bottom: 38px;
-}
+  }
 
-.project-team-wrap {
+  .project-team-wrap {
     padding: 32px 0px;
-}
+  }
 
-
-.project-team-wrapper {
+  .project-team-wrapper {
     padding-bottom: 60px;
-}
+  }
 
+  img.invite-mobile {
+    width: 275px;
+  }
 
-img.invite-mobile {
-      width: 275px;
-}
-
-
-.project-management-wrap {
+  .project-management-wrap {
     padding-top: 56px;
     column-gap: 25px;
-}
+  }
 
-
-.project-management-wrap .project-screen {
+  .project-management-wrap .project-screen {
     width: 550px;
     height: 508px;
-}
+  }
 
-
-.project-screen-wrap .project-team-more p {
+  .project-screen-wrap .project-team-more p {
     padding-bottom: 24px;
-}
+  }
 
-
-.project-screen-wrap {
-  
+  .project-screen-wrap {
     row-gap: 20px;
-}
-
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
-
-
-.project-wrapper h1 {
+  .project-wrapper h1 {
     font-size: 52px;
     line-height: 60px;
     max-width: 435px;
-}
+  }
 
-
-img.project_user {
+  img.project_user {
     top: -370px;
     right: -495px;
     width: 90%;
-}
+  }
 
-
-img.project_user_1{
+  img.project_user_1 {
     bottom: -415px;
     right: -400px;
     width: 90%;
-}
+  }
 
-
-.project-section {
+  .project-section {
     padding-top: 95px;
-    
-}
+  }
 
-.project-retain-wrap .video {
+  .project-retain-wrap .video {
     width: 435px;
     height: 350px;
-}
+  }
 
-
-.project-retain-wrapper p {
+  .project-retain-wrapper p {
     padding-top: 12px;
     padding-bottom: 26px;
-}
+  }
 
-.project-retain-wrapper h1, .sale-header h1 {
+  .project-retain-wrapper h1,
+  .sale-header h1 {
     font-size: 42px;
     line-height: 52px;
     max-width: 470px;
-}
+  }
 
-.project-retain-wrapper button, .project-wrapper button {
+  .project-retain-wrapper button,
+  .project-wrapper button {
     width: 170px;
     padding: 14px 0;
     font-size: 18px;
     line-height: 24px;
-}
+  }
 
-
-.project_section_3, .project-slider-section, .project-income-section 
- {
+  .project_section_3,
+  .project-slider-section,
+  .project-income-section {
     padding: 80px 0;
-}
+  }
 
-.project-wrapper p{
+  .project-wrapper p {
     font-size: 20px;
     line-height: 28px;
     max-width: 410px;
     padding-top: 12px;
     padding-bottom: 28px;
-}
+  }
 
-
-.project-wrapper button {
+  .project-wrapper button {
     margin-bottom: 96px;
-}
+  }
 
-
-.project-retain-wrap .triangle .triangle-icon{
+  .project-retain-wrap .triangle .triangle-icon {
     top: 25px;
     left: 27px;
-}
+  }
 
-
-.project-retain-wrap .triangle {
+  .project-retain-wrap .triangle {
     width: 60px;
     height: 60px;
     top: 140px;
     left: 196px;
-}
+  }
 
-.tab-slot h1, .retain-card h4 {
-  font-size: 20px;
-}
+  .tab-slot h1,
+  .retain-card h4 {
+    font-size: 20px;
+  }
 
-.slider-info h2 {
+  .slider-info h2 {
     font-size: 32px;
     line-height: 42px;
     max-width: 500px;
     padding-top: 45px;
-}
+  }
 
-
-.star {
+  .star {
     font-size: 14px;
-}
+  }
 
-.slider-info h4 {
+  .slider-info h4 {
     padding-top: 56px;
-}
+  }
 
-
-.income-wrapper h1 {
+  .income-wrapper h1 {
     font-size: 52px;
     line-height: 60px;
     max-width: 640px;
-}
+  }
 
-
-.income-wrapper p {
+  .income-wrapper p {
     padding-bottom: 54px;
-}
+  }
 
-
-.income-wrap-text h3 {
+  .income-wrap-text h3 {
     font-size: 32px;
     line-height: 42px;
     max-width: 345px;
+  }
 
-}
-
-
-.invite-wrap h2 {
+  .invite-wrap h2 {
     font-size: 52px;
     line-height: 60px;
     max-width: 425px;
     padding-top: 68px;
-}
+  }
 
-
-.invite-wrap button {
+  .invite-wrap button {
     padding: 14px 20px;
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 100px;
-}
+  }
 
-.invite-logo h1  {
+  .invite-logo h1 {
     width: 46px;
     height: 46px;
     font-size: 28px;
     padding: 4px 10px;
-}
+  }
 
-.project-invite-section {
+  .project-invite-section {
     padding: 60px 0;
-}
+  }
 
-
-.project-team-header h1 {
+  .project-team-header h1 {
     font-size: 48px;
     line-height: 56px;
-}
+  }
 
-
-.project-team-header p {
+  .project-team-header p {
     padding-bottom: 38px;
-}
+  }
 
-.project-team-wrap {
+  .project-team-wrap {
     padding: 32px 0px;
-}
+  }
 
-
-.project-team-wrapper {
+  .project-team-wrapper {
     padding-bottom: 60px;
-}
+  }
 
+  img.invite-mobile {
+    width: 275px;
+  }
 
-img.invite-mobile {
-      width: 275px;
-}
-
-
-.project-management-wrap {
+  .project-management-wrap {
     padding-top: 56px;
     column-gap: 25px;
-}
+  }
 
-
-.project-management-wrap .project-screen {
+  .project-management-wrap .project-screen {
     width: 550px;
     height: 508px;
-}
+  }
 
-
-.project-screen-wrap .project-team-more p {
+  .project-screen-wrap .project-team-more p {
     padding-bottom: 24px;
-}
+  }
 
-
-.project-screen-wrap {
-  
+  .project-screen-wrap {
     row-gap: 20px;
-}
-
+  }
 }
 </style>
 
