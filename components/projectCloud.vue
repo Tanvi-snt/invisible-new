@@ -28,14 +28,15 @@
         </div>
       </div>
     </section>
-
+<!-- 
     <section class="price-change-section">
       <div class="container">
         <div class="change-wrapper">
           <h1>Yearly Price Change</h1>
+    
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="price-statistics-section">
       <div class="container">
@@ -212,7 +213,25 @@
         </div>
       </div>
     </section>
-    
+    <section class="porfolio-section">
+        <div class="container">
+          <div class="portfolio-wrapper">
+              <h5>Portfolio</h5>
+              <h1>Latest Awesome Works</h1>
+              <client-only>
+            <carousel v-bind="options">
+              <slide v-for="i in 5" :key="i">
+                <div class="porfolio-wrap">
+                     <img src="~/assets/img/mobile.png" alt="">
+
+                </div>
+                
+              </slide>
+            </carousel>
+          </client-only>
+          </div>
+        </div>
+      </section>  
   
   </div>
 </template>
@@ -230,6 +249,18 @@ export default {
         paginationEnabled: false,
         autoplay: true,
       },
+      chartOptions: {
+          chart: {
+            id: 'vuechart-example'
+          },
+          xaxis: {
+            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+          }
+        },
+        series: [{
+          name: 'series-1',
+          data: [30, 40, 35, 50, 49, 60, 70, 91]
+        }]
     };
   }
 };
@@ -657,6 +688,13 @@ button.buy-btn {
   padding-top: 48px;
 }
 
+
+.price-chart-wrapper button, .statistics-wrapper button {
+    width: 180px;
+    padding: 14px 0;
+    margin-top: 62px;
+}
+
 .tab-dot {
   background-color: #ee3465;
   border-radius: 100%;
@@ -682,6 +720,400 @@ button.buy-btn {
   display: flex;
   column-gap: 11px;
 }
+
+.porfolio-section {
+  background-color: #21203A;
+  padding-top: 100px;
+  padding-bottom: 166px;
+}
+
+.portfolio-wrapper h5 {
+  font-size: 22px;
+  letter-spacing: -0.55px;
+  line-height: 30px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.portfolio-wrapper h1 {
+  font-size: 56px;
+  letter-spacing: -2.4px;
+  line-height: 62px;
+  max-width: 729px;
+  text-align: center;
+  margin: auto;
+}
+
+.porfolio-wrap img {
+  margin: auto;
+  display: block;
+}
+
+.portfolio-wrapper .porfolio-wrap {
+  padding-top: 60px;
+}
+
+
+@media (max-width: 767px) {
+  img.cloud-img  {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+
+.cloud-wrapper h1 {
+    font-size: 38px;
+    line-height: 48px;
+  
+}
+
+
+.price-chart-wrapper p, .statistics-wrapper p {
+    font-size: 16px;
+    line-height: 24px;
+  
+}
+
+
+.statistics-data {
+    display: flex;
+    column-gap: 33px;
+    row-gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 15px;
+}
+
+
+.price-chart-wrapper button, .statistics-wrapper button {
+    width: 155px;
+}
+
+
+.statistics-data h2 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.price-chart-wrapper button .statistics-wrapper button{
+  font-size: 16px;
+}
+
+
+.pie-box {
+    width: 100%;
+    padding: 32px 35px 35px 38px;
+}
+
+
+.piechart {
+    width: 236px;
+    height: 236px;
+ 
+}
+
+.pie-box h1 {
+    font-size: 28px;
+    line-height: 42px;
+    padding-bottom: 16px;
+}
+
+
+.price-statistics-section,.pie-section {
+    padding: 70px 0;
+}
+
+
+  .slider-info h2 {
+    font-size: 30px;
+    line-height: 42px;
+    max-width: 380px;
+    margin: auto;
+    padding-top: 38px;
+    text-align: center;
+  }
+
+  .star {
+    font-size: 14px;
+  }
+
+  .slider-info h4 {
+    font-size: 20px;
+    line-height: 28px;
+    padding-top: 46px;
+  }
+
+  .slider-profile {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+  }
+
+.slider-info {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.cart-wrapper .cloud_cart {
+
+    padding: 26px 26px 28px 26px;
+    max-width: 400px;
+}
+
+
+.cloud_cart h1 {
+    font-size: 28px;
+    line-height: 42px;
+}
+
+
+.cloud_cart p{
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+
+button.cart-btn, button.buy-btn {
+    width: 160px;
+font-size: 16px;
+}
+
+  .project-slider-wrap  {
+    flex-direction: column;
+  }
+
+
+
+.portfolio-wrapper h1{
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.price-chart-wrapper button, .statistics-wrapper button {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.porfolio-section {
+    background-color: #21203A;
+    padding-top: 65px;
+    padding-bottom: 88px;
+}
+.cart-header p {
+    font-size: 14px;
+    padding: 0 8px;
+}
+.porfolio-wrap img {
+  width: 80%;
+}
+
+
+
+.cloud-wrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 340px;
+    padding-bottom: 30px;
+}
+
+
+.cloud-wrapper .cloud-play {
+    width: 50px;
+    height: 50px;
+}
+
+
+.price-chart-wrapper h1, .statistics-wrapper h1 {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+
+.cloud-section {
+    padding-top: 56px;
+}
+
+
+.cloud-play img {
+    top: 20px;
+    left: 22px;
+}
+
+
+}
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .project-slider-wrap  {
+    column-gap: 25px;
+  }
+
+  img.cloud-img {
+    width: 100%;
+    margin-top: 42px
+  }
+
+
+.cloud-wrapper h1 {
+    font-size: 46px;
+    line-height: 52px;
+    max-width: 525px;
+   
+}
+.statistics-data {
+  grid-template-columns: 5fr 3fr 2fr 2fr 2fr;
+  column-gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 38px;
+}
+
+
+.statistics-data h2 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+
+.cloud-wrapper p {
+    padding-bottom: 38px;
+    font-size: 18px;
+    max-width: 425px;
+    
+}
+
+.cloud-section  {
+    padding-top: 65px;
+}
+
+
+.price-chart-wrapper h1, .statistics-wrapper h1, .portfolio-wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+   
+}
+
+  .slider-info h2 {
+    font-size: 32px;
+    line-height: 42px;
+    max-width: 500px;
+    padding-top: 34px;
+  }
+
+  .star {
+    font-size: 12px;
+  }
+
+  .slider-info h4 {
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+.porfolio-section{
+        padding-top: 65px;
+    padding-bottom: 65px;
+}
+.price-chart-wrapper button, .statistics-wrapper button {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+
+.portfolio-wrapper .porfolio-wrap {
+    padding-top: 38px;
+}
+
+
+.porfolio-wrap img {
+  
+    width: 40%;
+}
+
+.cloud-cart-section {
+  padding: 65px 0;
+
+}
+.cart-wrapper .cloud_cart {
+  max-width: 425px;
+}
+
+
+.pie-box {
+    width: 470px;
+    padding: 30px 36px 42px 36px;
+}
+
+.pie-box h1  {
+    font-size: 32px;
+    line-height: 42px;
+    padding-bottom: 16px;
+}
+
+.piechart {
+      width: 260px;
+    height: 260px;
+}
+
+button.cart-btn, button.buy-btn {
+  width: 165px;
+}
+
+.cloud_cart h1 {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 12px;
+}
+
+}
+
+@media (min-width: 993px) and (max-width: 1024px)  {
+  img.cloud-img {
+    width: 100%;
+    margin-top: 42px
+  }
+
+
+.cloud-wrapper h1 {
+    font-size: 52px;
+    line-height: 60px;
+    max-width: 575px;
+   
+}
+
+
+.cloud-wrapper p {
+    padding-bottom: 38px;
+}
+
+.cloud-section  {
+    padding-top: 65px;
+}
+
+
+.price-chart-wrapper h1, .statistics-wrapper h1, .portfolio-wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+   
+}
+
+.star {
+    font-size: 14px;
+  }
+
+  .slider-info h4 {
+    padding-top: 56px;
+  }
+
+  
+.porfolio-section{
+    padding-top: 76px;
+    padding-bottom: 100px;
+}
+
+}
+
 </style>
 
 

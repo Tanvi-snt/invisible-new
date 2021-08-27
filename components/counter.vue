@@ -48,7 +48,7 @@
                 </div>
                 <div class="slider_img">
                   <img src="~/assets/img/slide2.png" alt="" class="slide" />
-                  <img src="~/assets/img/slider1.png" alt="" />
+                  <img src="~/assets/img/slider1.png" alt="" class="slider_1"/>
                 </div>
               </div>
             </slide>
@@ -165,6 +165,7 @@ export default {
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
+  
   .slide_wrapper {
     overflow: hidden;
   }
@@ -175,6 +176,9 @@ export default {
 }
 
 @media (max-width: 767px) {
+   .slider_img img.slider_1 {
+    display: none;
+  }
 
 .counter_section {
     padding: 52px 0;
@@ -230,6 +234,9 @@ export default {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    .slider_img img.slider_1 {
+    display: none;
+  }
   .slide_content h2 {
     font-size: 28px;
     line-height: 38px;
@@ -254,7 +261,7 @@ export default {
 }
 
 .slider_img img.slide {
-  width: 285px;
+  width: 100%;
 }
 
 
@@ -274,6 +281,11 @@ export default {
 
 
 @media (min-width: 993px) and (max-width: 1024px) {
+
+.slider_img img.slide {
+  width: 100%;
+}
+
 
 .counter_section {
     padding: 68px 0;
@@ -305,9 +317,16 @@ export default {
     overflow: hidden;
 
   }
+   .slider_img img.slider_1 {
+    display: none;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
+
+  .slider_img img.slider_1 {
+    display: none;
+  }
 
   .slider_img img.slide {
     width: 100%;

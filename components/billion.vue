@@ -63,13 +63,15 @@ export default {
 .billion-flex {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  left: -150px;
+  /* position: relative;
+  left: -150px; */
 }
 
 .billion-flex .card-group {
   display: flex;
-  column-gap: 30px;
+      position: relative;
+    column-gap: 30px;
+    left: -160px;
 }
 
 .billion-text h1 {
@@ -111,9 +113,9 @@ export default {
 .billion-card {
   background-color: #21203a;
   border-radius: 8px;
-  width: 350px;
-  height: 400px;
-  padding: 28px 30px 30px 30px;
+    width: 300px;
+      height: 400px;
+  padding: 28px 30px 30px 25px;
 }
 
 .billion-card-inner {
@@ -487,9 +489,18 @@ img.case {
   .bar-charts div.bar10 {
     top: 119px;
   }
+
+  .billion-text {
+        position: relative;
+        left: -100px;
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1024px) {
+    .billion-text {
+        position: relative;
+        left: -100px;
+  }
   .billion-text h1 {
     font-size: 42px;
     line-height: 48px;
@@ -592,8 +603,13 @@ img.case {
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
+    .billion-text {
+        position: relative;
+        left: -120px;
+  }
   .billion-flex .card-group {
     flex-wrap: nowrap;
+        left: -205px;
   }
 
   .billion-card {

@@ -62,6 +62,7 @@ ul li .nav-item {
   font-weight: 600;
   text-decoration: none;
   padding-left: 47px;
+  cursor: pointer;
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
