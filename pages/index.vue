@@ -35,6 +35,8 @@ export default {
 
 <style scoped>
 
+
+
 @media(min-width: 1200px) {
 	.container {
 		max-width: 1230px;

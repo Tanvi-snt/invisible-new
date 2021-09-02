@@ -47,6 +47,7 @@ export default {
    */
   plugins: [
     { src: './plugins/vue-carousel.js', mode: 'client' },
+  
 
   ],
   /*

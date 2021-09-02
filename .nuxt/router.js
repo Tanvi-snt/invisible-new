@@ -3,13 +3,13 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _1aac3357 = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
-const _662ec080 = () => interopDefault(import('../pages/price.vue' /* webpackChunkName: "pages/price" */))
-const _3f919460 = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
-const _26b91611 = () => interopDefault(import('../pages/project1.vue' /* webpackChunkName: "pages/project1" */))
-const _26c72d92 = () => interopDefault(import('../pages/project2.vue' /* webpackChunkName: "pages/project2" */))
-const _26d54513 = () => interopDefault(import('../pages/project3.vue' /* webpackChunkName: "pages/project3" */))
-const _1b7b2ac9 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _7972eaf3 = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
+const _4df08e5c = () => interopDefault(import('../pages/price.vue' /* webpackChunkName: "pages/price" */))
+const _3efded6c = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
+const _be6d5c16 = () => interopDefault(import('../pages/project1.vue' /* webpackChunkName: "pages/project1" */))
+const _be512d14 = () => interopDefault(import('../pages/project2.vue' /* webpackChunkName: "pages/project2" */))
+const _be34fe12 = () => interopDefault(import('../pages/project3.vue' /* webpackChunkName: "pages/project3" */))
+const _c6f9cd36 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -29,31 +29,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/contact",
-    component: _1aac3357,
+    component: _7972eaf3,
     name: "contact"
   }, {
     path: "/price",
-    component: _662ec080,
+    component: _4df08e5c,
     name: "price"
   }, {
     path: "/project",
-    component: _3f919460,
+    component: _3efded6c,
     name: "project"
   }, {
     path: "/project1",
-    component: _26b91611,
+    component: _be6d5c16,
     name: "project1"
   }, {
     path: "/project2",
-    component: _26c72d92,
+    component: _be512d14,
     name: "project2"
   }, {
     path: "/project3",
-    component: _26d54513,
+    component: _be34fe12,
     name: "project3"
   }, {
     path: "/",
-    component: _1b7b2ac9,
+    component: _c6f9cd36,
     name: "index"
   }],
 

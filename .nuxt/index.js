@@ -13,7 +13,7 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_bootstrapvue_51219638 from 'nuxt_plugin_bootstrapvue_51219638' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_1576dec8 from 'nuxt_plugin_bootstrapvue_1576dec8' // Source: ./bootstrap-vue.js (mode: 'all')
 import nuxt_plugin_vuecarousel_3ed7d84a from 'nuxt_plugin_vuecarousel_3ed7d84a' // Source: ../plugins/vue-carousel.js (mode: 'client')
 
 // Component: <ClientOnly>
@@ -196,8 +196,8 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_bootstrapvue_51219638 === 'function') {
-    await nuxt_plugin_bootstrapvue_51219638(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_1576dec8 === 'function') {
+    await nuxt_plugin_bootstrapvue_1576dec8(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_vuecarousel_3ed7d84a === 'function') {

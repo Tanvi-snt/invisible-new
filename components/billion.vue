@@ -54,6 +54,8 @@ export default {
 
 
 <style scoped>
+
+
 .billion-section {
   background-color: #19182c;
   padding-top: 100px;
@@ -63,8 +65,7 @@ export default {
 .billion-flex {
   display: flex;
   justify-content: space-between;
-  /* position: relative;
-  left: -150px; */
+
 }
 
 .billion-flex .card-group {
@@ -75,17 +76,15 @@ export default {
 }
 
 .billion-text h1 {
-  color: #ffffff;
-  font-weight: 600;
+
   font-size: 56px;
   letter-spacing: -2.4px;
   line-height: 62px;
   max-width: 570px;
-  margin-bottom: 0;
 }
 
 .billion-text p {
-  color: #ffffff;
+
   font-size: 18px;
   letter-spacing: -0.3px;
   line-height: 26px;
@@ -93,7 +92,7 @@ export default {
   max-width: 445px;
   padding-top: 16px;
   padding-bottom: 36px;
-  margin-bottom: 0;
+
 }
 
 .billion-text button {
@@ -107,7 +106,6 @@ export default {
   line-height: 28px;
   font-weight: 600;
   padding-left: 14px;
-  border: none;
 }
 
 .billion-card {
@@ -125,12 +123,9 @@ export default {
 }
 
 .billion-card h3 {
-  color: #ffffff;
-  font-weight: 600;
   font-size: 22px;
   letter-spacing: -0.55px;
   line-height: 30px;
-  margin-bottom: 0;
 }
 
 .bar-charts {
@@ -138,14 +133,12 @@ export default {
 }
 
 .billion-card p {
-  color: #ffffff;
   font-size: 18px;
   letter-spacing: -0.3px;
   line-height: 26px;
   opacity: 0.5;
   width: 199px;
   padding-top: 5px;
-  margin-bottom: 0;
 }
 
 .button-case {

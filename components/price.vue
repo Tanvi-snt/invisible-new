@@ -87,12 +87,14 @@
         </div>
       </div>
     </section>
+  
   </div>
 </template>
 
 <script>
 export default {
   name: "Price",
+   
 };
 </script>
 

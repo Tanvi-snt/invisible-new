@@ -1748,7 +1748,7 @@ img.project_user_1 {
     line-height: 24px;
   }
 
-  .project_section_3,
+  
   .project-slider-section,
   .project-income-section {
     padding: 80px 0;
@@ -1795,8 +1795,10 @@ img.project_user_1 {
   }
 
   .slider-info h4 {
-    padding-top: 56px;
+    padding: 80px 0;
   }
+
+
 
   .income-wrapper h1 {
     font-size: 52px;
