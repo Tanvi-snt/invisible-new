@@ -42,7 +42,7 @@ collections:
   - name: 'Globals'
     label: 'globals'
     files: 
-    - folder: 'content/global/data.json'
+    - file: 'content/global/data.json'
       label : 'Footer'
       name : 'footer'
       format: 'json'
